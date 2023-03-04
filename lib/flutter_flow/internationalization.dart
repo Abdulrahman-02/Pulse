@@ -12,7 +12,7 @@ class FFLocalizations {
   static FFLocalizations of(BuildContext context) =>
       Localizations.of<FFLocalizations>(context, FFLocalizations)!;
 
-  static List<String> languages() => ['en'];
+  static List<String> languages() => ['en', 'fr'];
 
   static late SharedPreferences _prefs;
   static Future initialize() async =>
@@ -38,8 +38,9 @@ class FFLocalizations {
 
   String getVariableText({
     String? enText = '',
+    String? frText = '',
   }) =>
-      [enText][languageIndex] ?? '';
+      [enText, frText][languageIndex] ?? '';
 
   static const Set<String> _languagesWithShortCode = {
     'ar',
@@ -103,5 +104,95 @@ Locale createLocale(String language) => language.contains('_')
       )
     : Locale(language);
 
-final kTranslationsMap =
-    <Map<String, Map<String, String>>>[].reduce((a, b) => a..addAll(b));
+final kTranslationsMap = <Map<String, Map<String, String>>>[
+  // Landing
+  {
+    'p07bmbt6': {
+      'en': 'Home',
+      'fr': '',
+    },
+  },
+  // authentification
+  {
+    'styjddcc': {
+      'en': 'Sign In',
+      'fr': '',
+    },
+    'hbdefo45': {
+      'en': 'Email Address',
+      'fr': '',
+    },
+    'y94wcw8u': {
+      'en': 'Enter your email...',
+      'fr': '',
+    },
+    '644537ge': {
+      'en': 'Password',
+      'fr': '',
+    },
+    's3nw7iox': {
+      'en': 'Enter your password...',
+      'fr': '',
+    },
+    '4ekk383e': {
+      'en': 'Sign In',
+      'fr': '',
+    },
+    't7blbq5a': {
+      'en': 'Forgot Password?',
+      'fr': '',
+    },
+    'szgo8gxm': {
+      'en': 'Or use a social account to login',
+      'fr': '',
+    },
+    'w8csn8wd': {
+      'en': 'Sign Up',
+      'fr': '',
+    },
+    'w6xmw1cs': {
+      'en': 'Email Address',
+      'fr': '',
+    },
+    'e9c9u0zz': {
+      'en': 'Enter your email...',
+      'fr': '',
+    },
+    '90fi8p9v': {
+      'en': 'Full Name',
+      'fr': '',
+    },
+    't2wqjjap': {
+      'en': 'Enter your full  name...',
+      'fr': '',
+    },
+    '9ragmn9k': {
+      'en': 'Password',
+      'fr': '',
+    },
+    'vwu0h0ag': {
+      'en': 'Enter your password...',
+      'fr': '',
+    },
+    'yqn9ind0': {
+      'en': 'Confirm Password',
+      'fr': '',
+    },
+    'f1iyybcm': {
+      'en': 'Enter your password...',
+      'fr': '',
+    },
+    'd287nkwp': {
+      'en': 'Create Account',
+      'fr': '',
+    },
+    'xt9al9g9': {
+      'en': 'Sign up using a social account',
+      'fr': '',
+    },
+    'w3omlwxa': {
+      'en': 'Home',
+      'fr': '',
+    },
+  },
+].reduce((a, b) => a..addAll(b));
