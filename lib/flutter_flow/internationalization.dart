@@ -105,13 +105,6 @@ Locale createLocale(String language) => language.contains('_')
     : Locale(language);
 
 final kTranslationsMap = <Map<String, Map<String, String>>>[
-  // Landing
-  {
-    'p07bmbt6': {
-      'en': 'Home',
-      'fr': '',
-    },
-  },
   // authentification
   {
     'styjddcc': {
@@ -192,6 +185,151 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'w3omlwxa': {
       'en': 'Home',
+      'fr': '',
+    },
+  },
+  // Home
+  {
+    'iwx99xp8': {
+      'en': 'Page Title',
+      'fr': '',
+    },
+    'rbhcegp9': {
+      'en': 'Home',
+      'fr': '',
+    },
+  },
+  // landing
+  {
+    '8tsmbpue': {
+      'en': 'Home',
+      'fr': '',
+    },
+  },
+  // check
+  {
+    '6jpkpaxp': {
+      'en': 'Page Title',
+      'fr': '',
+    },
+    '0498b2z7': {
+      'en': 'Home',
+      'fr': '',
+    },
+  },
+  // schedule
+  {
+    'd5kqssur': {
+      'en': 'Page Title',
+      'fr': '',
+    },
+    '1txhr6ch': {
+      'en': 'Home',
+      'fr': '',
+    },
+  },
+  // menu
+  {
+    'a9fkk2m0': {
+      'en': 'Page Title',
+      'fr': '',
+    },
+    '3mc5wu6x': {
+      'en': 'Home',
+      'fr': '',
+    },
+  },
+  // somebody
+  {
+    '8zebj0bf': {
+      'en': 'Page Title',
+      'fr': '',
+    },
+    '4vbev21z': {
+      'en': 'Home',
+      'fr': '',
+    },
+  },
+  // Miscellaneous
+  {
+    'kjep22eb': {
+      'en': '',
+      'fr': '',
+    },
+    '5stbzq2q': {
+      'en': '',
+      'fr': '',
+    },
+    '6pcwl1yt': {
+      'en': '',
+      'fr': '',
+    },
+    'ftdmxvwx': {
+      'en': '',
+      'fr': '',
+    },
+    'hr360b87': {
+      'en': '',
+      'fr': '',
+    },
+    'eevbteky': {
+      'en': '',
+      'fr': '',
+    },
+    'ni56kocf': {
+      'en': '',
+      'fr': '',
+    },
+    '9uywr4sh': {
+      'en': '',
+      'fr': '',
+    },
+    'zx5t3zhj': {
+      'en': '',
+      'fr': '',
+    },
+    '0ul89my3': {
+      'en': '',
+      'fr': '',
+    },
+    'fgk8ls6j': {
+      'en': '',
+      'fr': '',
+    },
+    'l2wkw2ww': {
+      'en': '',
+      'fr': '',
+    },
+    '88h48d5f': {
+      'en': '',
+      'fr': '',
+    },
+    '66tjahcl': {
+      'en': '',
+      'fr': '',
+    },
+    'p00u0c28': {
+      'en': '',
+      'fr': '',
+    },
+    'odp1kk49': {
+      'en': '',
+      'fr': '',
+    },
+    '34o7w13h': {
+      'en': '',
+      'fr': '',
+    },
+    '3b2due61': {
+      'en': '',
+      'fr': '',
+    },
+    'banc404v': {
+      'en': '',
+      'fr': '',
+    },
+    'w0rmk954': {
+      'en': '',
       'fr': '',
     },
   },

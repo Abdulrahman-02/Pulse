@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -24,6 +25,19 @@ class _LandingWidgetState extends State<LandingWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => LandingModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      context.pushNamed(
+        'authentification',
+        extra: <String, dynamic>{
+          kTransitionInfoKey: TransitionInfo(
+            hasTransition: true,
+            transitionType: PageTransitionType.fade,
+          ),
+        },
+      );
+    });
   }
 
   @override
@@ -46,8 +60,8 @@ class _LandingWidgetState extends State<LandingWidget> {
             alignment: AlignmentDirectional(0.0, 0.0),
             child: SvgPicture.network(
               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/pulse-fz0i5r/assets/9u988mgaqgc9/default.svg',
-              width: 250.0,
-              height: 250.0,
+              width: 300.0,
+              height: 100.0,
               fit: BoxFit.cover,
             ),
           ),

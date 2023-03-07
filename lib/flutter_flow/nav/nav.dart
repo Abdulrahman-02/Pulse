@@ -67,26 +67,59 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, _) => appStateNotifier.loggedIn
-          ? AuthentificationWidget()
-          : LandingWidget(),
+      errorBuilder: (context, _) =>
+          appStateNotifier.loggedIn ? NavBarPage() : LandingWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.loggedIn
-              ? AuthentificationWidget()
-              : LandingWidget(),
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? NavBarPage() : LandingWidget(),
           routes: [
-            FFRoute(
-              name: 'Landing',
-              path: 'landing',
-              builder: (context, params) => LandingWidget(),
-            ),
             FFRoute(
               name: 'authentification',
               path: 'authentification',
               builder: (context, params) => AuthentificationWidget(),
+            ),
+            FFRoute(
+              name: 'Home',
+              path: 'home',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Home')
+                  : HomeWidget(),
+            ),
+            FFRoute(
+              name: 'landing',
+              path: 'landing',
+              builder: (context, params) => LandingWidget(),
+            ),
+            FFRoute(
+              name: 'check',
+              path: 'check',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'check')
+                  : CheckWidget(),
+            ),
+            FFRoute(
+              name: 'schedule',
+              path: 'schedule',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'schedule')
+                  : ScheduleWidget(),
+            ),
+            FFRoute(
+              name: 'menu',
+              path: 'menu',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'menu')
+                  : MenuWidget(),
+            ),
+            FFRoute(
+              name: 'somebody',
+              path: 'somebody',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'somebody')
+                  : SomebodyWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),
